@@ -6,13 +6,10 @@ import random
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
-#TODO Вынести в файл config
 ADMIN_NAME = "admin"
 PASSWORD = "admin"
 UNAUTHENTICATED = "unauthenticated"
 AUTHENTICATED = "authenticated"
-
-#TODO Вынести в файл messages
 ERROR_MESSAGE = "Неверный логин или пароль"
 
 cookies = {ADMIN_NAME: UNAUTHENTICATED}
