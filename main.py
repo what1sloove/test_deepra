@@ -1,15 +1,18 @@
-from fastapi import FastAPI, Request, Form, Response
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import FastAPI, Request, Form
+from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import random
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
+#Перенести в файл config
 ADMIN_NAME = "admin"
 PASSWORD = "admin"
 UNAUTHENTICATED = "unauthenticated"
 AUTHENTICATED = "authenticated"
+
+#Перенести в файл messages
 ERROR_MESSAGE = "Неверный логин или пароль"
 
 cookies = {ADMIN_NAME: UNAUTHENTICATED}
